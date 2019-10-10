@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <h2 align="center" style="cursor: pointer" (click)="router.navigate([''])"> CRUD-DEMO </h2> 
+    <router-outlet></router-outlet>
+  `
 })
 export class AppComponent {
-  title = 'crud-demo';
 
-  constructor() {
-  }
+  constructor(private router: Router) { }
 }
